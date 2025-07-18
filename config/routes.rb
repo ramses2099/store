@@ -9,22 +9,22 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  get "/products", to: "products#index"
+  # get "/products", to: "products#index"
 
-  get "/products/new", to: "products#new"
-  post "/products", to: "products#create"
+  # get "/products/new", to: "products#new"
+  # post "/products", to: "products#create"
 
-  get "/products/:id", to: "products#show"
+  # get "/products/:id", to: "products#show"
 
-  get "/products/:id/edit", to: "products#edit"
-  patch "/products/:id", to: "products#update"
-  put "/products/:id", to: "products#update"
+  # get "/products/:id/edit", to: "products#edit"
+  # patch "/products/:id", to: "products#update"
+  # put "/products/:id", to: "products#update"
 
-  delete "/products/:id", to: "products#destroy"
+  # delete "/products/:id", to: "products#destroy"
 
   # replace all the routers
-  # resources :products
+  resources :products
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "products#index"
 end
